@@ -7,18 +7,18 @@ The following is a guide for converting SVN to GIT. It includes steps to bringin
 - `svn propget svn:externals -R . > externals.txt` - Produce a set of required externals
 - Open `externals.txt', should look something like:
 
-    httpdocs/library - img https://svn.aerian.com/aerian/bbc/branches/externals/img
+    `httpdocs/library - img https://svn.mildfuzzz.com/project/branches/externals/img`
 
 ## Clone project and each of your externals to seperate folders
 
  - `mkdir [wrapper folder] && cd [wrapper folder]`
  - clone each of the externals in your externals txt:
    - `git svn clone [SVN URL] [desired folder]` so in my example
-   - `git svn clone https://svn.aerian.com/aerian/bbc/branches/externals/bbc-1.0.0-49742/img_49742 img`
+   - `git svn clone https://svn.mildfuzzz.com/project/branches/externals/img img`
    - repeat previous step for all externals
    - clone project, using the same syntax as above:
     - `git svn clone [YOUR SVN PROJECT REPO TRUNK URL] [PROJECT FOLDER]`
-    - e.g `git svn clone https://svn.aerian.com/aerian/baseProject/trunk baseProject`
+    - e.g `git svn clone https://svn.mildfuzzz.com/project/trunk baseProject`
 
    - you should now have a folder project like:
 
